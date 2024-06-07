@@ -63,7 +63,7 @@ const Projects = () => {
             {error && <p className={styles.errorMessage}>{error}</p>}
             {authMessage && <p className={styles.authMessage}>{authMessage}</p>}
             <button onClick={checkAuth} className={styles.checkAuthButton}>
-                Vérifier l'authentification
+                Vérifier l authentification
             </button>
             <ul className={styles.projectList}>
                 {projects.map((project) => (
