@@ -1,0 +1,61 @@
+/* app/projects/Projects.module.css */
+.projectsContainer {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.errorMessage {
+    color: red;
+    margin-top: 10px;
+}
+
+.authMessage {
+    color: green;
+    margin-top: 10px;
+}
+
+.projectList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projectItem {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.projectImage {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.tagList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.tagItem {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.checkAuthButton {
+    padding: 10px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.checkAuthButton:hover {
+    background-color: #005bb5;
+}
