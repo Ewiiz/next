@@ -1,4 +1,3 @@
-// app/projects/page.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -27,7 +26,7 @@ const Projects = () => {
                 const data = await response.json();
                 setProjects(data);
             } catch (error) {
-                setError((error as Error).message);
+                setError(error.message); // Correction de la gestion de l'erreur ici
             }
         };
 
@@ -53,7 +52,7 @@ const Projects = () => {
                 console.error(`Erreur lors de la vérification de l'authentification`);
             }
         } catch (error) {
-            setAuthMessage('Erreur: ' + (error as Error).message);
+            setAuthMessage(`Erreur: ${error.message}`);
             console.error('Erreur:', error);
         }
     };
@@ -64,7 +63,7 @@ const Projects = () => {
             {error && <p className={styles.errorMessage}>{error}</p>}
             {authMessage && <p className={styles.authMessage}>{authMessage}</p>}
             <button onClick={checkAuth} className={styles.checkAuthButton}>
-                Vérifier l authentification
+                Vérifier l'authentification
             </button>
             <ul className={styles.projectList}>
                 {projects.map((project) => (

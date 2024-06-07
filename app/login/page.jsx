@@ -1,6 +1,4 @@
-// app/login/page.tsx
-'use client';
-
+// app/login/page.jsx
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './Login.module.css';
@@ -10,10 +8,10 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const router = useRouter();
-    const urlProd = 'https://api.creanova.re'
-    const urlLocal = 'http://localhost:3333'
+    const urlProd = 'https://api.creanova.re';
+    const urlLocal = 'http://localhost:3333';
 
-    const handleSubmit = async (event: React.FormEvent) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         try {
@@ -38,7 +36,7 @@ const Login = () => {
             console.log(data.message);
             router.push('/projects');
         } catch (error) {
-            setErrorMessage((error as Error).message);
+            setErrorMessage(error.message);
         }
     };
 
