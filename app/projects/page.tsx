@@ -22,7 +22,7 @@ const Projects = () => {
                     credentials: 'include',
                 });
                 if (!response.ok) {
-                    throw new Error('Une erreur s\'est produite lors de la récupération des projets.');
+                    throw new Error(`Une erreur s'est produite lors de la récupération des projets.`);
                 }
                 const data = await response.json();
                 setProjects(data);
@@ -49,8 +49,8 @@ const Projects = () => {
                 setAuthMessage(`Authenticated: ${data.authenticated}`);
                 alert(`Authenticated: ${data.authenticated}`);
             } else {
-                setAuthMessage('Erreur lors de la vérification de l\'authentification');
-                console.error('Erreur lors de la vérification de l\'authentification');
+                setAuthMessage(`Erreur lors de la vérification de l'authentification`);
+                console.error(`Erreur lors de la vérification de l'authentification`);
             }
         } catch (error) {
             setAuthMessage('Erreur: ' + (error as Error).message);
@@ -64,7 +64,7 @@ const Projects = () => {
             {error && <p className={styles.errorMessage}>{error}</p>}
             {authMessage && <p className={styles.authMessage}>{authMessage}</p>}
             <button onClick={checkAuth} className={styles.checkAuthButton}>
-                Vérifier l'authentification
+                Vérifier l authentification
             </button>
             <ul className={styles.projectList}>
                 {projects.map((project) => (

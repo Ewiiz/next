@@ -45,7 +45,7 @@ const Login = () => {
     return (
         <div className={styles.loginContainer}>
             <nav>
-                <a href="/">Page</a>
+                <a href="/projects">Page</a>
             </nav>
             <h2>Connexion</h2>
             <form onSubmit={handleSubmit}>
